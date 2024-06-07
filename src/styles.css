@@ -1,5 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
-
+@import url("assets/css/lineawesome/css/line-awesome.min.css");
+@import "primeng/resources/themes/tailwind-light/theme.css";
+@import "primeng/resources/primeng.min.css";
 .bg-gray{
   background-color: rgba(207, 199, 207, 0.46);
 }

@@ -10,8 +10,10 @@
           "standalone": true,
           "inlineTemplate": true,
           "prefix": "aui",
-          "path": "app/ui/components",
-          "skipTests": true
+          "path": "src/app/ui/components",
+          "skipTests": true,
+          "flat": true,
+          "inlineStyle": true
         }
       },
       "root": "",
@@ -31,13 +33,25 @@
             "assets": [
               {
                 "glob": "**/*",
-                "input": "public"
-              }
+                "input": "public",
+                "output": "assets"
+              },
+              "src/assets"
             ],
             "styles": [
+              {
+                "bundleName": "boostrap-5-custom",
+                "inject": true,
+                "input": "metronic/demo33/assets/css/style.bundle.css"
+              },
+              "node_modules/quill/dist/quill.core.css",
+              "node_modules/quill/dist/quill.snow.css",
               "src/styles.css"
             ],
-            "scripts": [],
+            "scripts": [
+              "node_modules/quill/dist/quill.min.js",
+              "node_modules/chart.js/dist/chart.min.js"
+            ],
             "server": "src/main.server.ts",
             "prerender": true,
             "ssr": {
